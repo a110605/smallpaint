@@ -1,5 +1,6 @@
 # smallpaint
-![image](https://github.com/a110605/smallpaint/picture/screenshot.png)
+![image](https://github.com/a110605/smallpaint/blob/master/picture/screenshot.png)
+
 Usage
 -----
 git clone https://github.com/a110605/smallpaint.git
