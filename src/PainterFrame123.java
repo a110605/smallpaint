@@ -14,9 +14,9 @@ public class PainterFrame123 extends JFrame
 	private JLabel statusBar,slidersize;//狀態列
 	private JPanel west,south,east;//三個Panel
     private static final String[] names={"筆刷","直線","橢圓形","矩形","圓角矩形","橡皮擦"};//工具列名稱
-    private static final Color[] colornames={Color.BLACK,Color.BLUE,Color.CYAN,Color.DARK_GRAY,Color.GRAY,
-                                             Color.GREEN,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,
-                                             Color.PINK,Color.RED,Color.WHITE,Color.YELLOW};//顏色色塊
+    private static final Color[] colornames={Color.BLACK, Color.BLUE, Color.CYAN, Color.DARK_GRAY, Color.GRAY,
+                                             Color.GREEN, Color.LIGHT_GRAY, Color.MAGENTA, Color.ORANGE,
+                                             Color.PINK, Color.RED, Color.WHITE, Color.YELLOW};//顏色色塊
     private JButton[] buttons;//顏色按鈕
    	private Color forecolor =Color.BLACK, backcolor=Color.WHITE,color1,color2;//前景色 ,背景色,漸層色二
     private JRadioButton small,medium,big,hidden,display;//小、中、大、隱藏、顯示 radiobutton
@@ -66,22 +66,29 @@ public class PainterFrame123 extends JFrame
 	    display=new JRadioButton("顯示工具列",true);//預設是顯示
      	hidden=new JRadioButton("隱藏工具列",false);
      	gradient=new JButton("漸層");//new 漸層按鈕
+     	
      	slidersize=new JLabel("[筆刷粗細]:"+size);
     	slider=new JSlider(SwingConstants.HORIZONTAL,0,30,5);
 		slider.setMajorTickSpacing(1);
 		slider.setPaintTicks(true);
-     	
+		
+		try {
+	        UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
+		} 
+		catch (Exception e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
+		
      	buttons=new JButton[13];//new 13個JButton
      	for(int j=0;j<=12;j++)
      	{
-     	buttons[j]=new JButton();//把每個button new出來
-     	east.add(buttons[j]);//把13個Button加入east顏色列
-     	}
-    	
-     	for(int f=0;f<=12;f++)
-     	buttons[f].setBackground(colornames[f]);//按鈕設成不同顏色
-     	
-     
+     		
+	     	buttons[j]=new JButton();//把每個button new出來
+	     	east.add(buttons[j]);//把13個Button加入east顏色列
+	     	buttons[j].setBackground(colornames[j]);//按鈕設成不同顏色
+     	}     	
+  
      	
       	south.add(statusBar);//加入狀態列
      	south.add(display);//加入顯示選項
@@ -100,8 +107,6 @@ public class PainterFrame123 extends JFrame
         west.add(gradient);
         west.add(back);
         west.add(delete);
-        
-       
         
                 
         pensizeradioGroup=new ButtonGroup();//建一個筆刷大小的ButtonGroup
