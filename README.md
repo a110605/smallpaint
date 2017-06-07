@@ -2,7 +2,7 @@
 利用Java Swing裡的JComponent實作小畫家程式
 ![image](https://github.com/a110605/smallpaint/blob/master/picture/screenshot.png)
 
-## Feature
+## Features
 1. 實做選擇繪圖工具（筆刷、直線、橢圓形、矩形、圓角矩形、橡皮擦）
 2. 實做選擇筆刷大小（大、中、小）
 3. 實作按鈕功能
