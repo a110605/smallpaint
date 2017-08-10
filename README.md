@@ -1,4 +1,4 @@
-# smallpaint (小畫家)
+# Smallpaint (小畫家)
 利用Java Swing裡的JComponent實作小畫家程式
 ![image](https://github.com/a110605/smallpaint/blob/master/picture/screenshot.png)
 
@@ -15,7 +15,7 @@
 
 4. 在狀態列新增隱藏與顯示控制列的功能
 
-## Run
+## Quick Start
 ```
  # git clone https://github.com/a110605/smallpaint.git
  ```
